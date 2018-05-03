@@ -4,20 +4,11 @@ import './index.css';
 import Routes from './components/App/route'
 import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import thunk from 'redux-thunk';
-import { createStore, applyMiddleware } from 'redux';
-import { Provider } from 'react-redux'
-import { sort } from './reducers/reducer'
+import {createStore} from 'redux';
+import {Provider} from 'react-redux'
+import {issueTidReducer, reducer} from './reducers/reducers'
 
-const middleware = server => [ thunk ];
-
-const storeFactory = (server = false, initialState = {}) =>
-  applyMiddleware(...middleware(server))(createStore)(
-    sort,
-    initialState
-  );
-
-const store = storeFactory();
+const store = createStore(reducer);
 
 ReactDOM.render(
   <Provider store={store}>
