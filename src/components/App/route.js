@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import IssueTidEmailPhone from '../IssueTid/IssueTidEmailPhone'
 import IssueTidAccountId from '../IssueTid/IssueTidAccountId'
 import SchemeValidation from '../SchemeValidation/SchemeValidation'
+import Transaction from '../Transaction/Transaction'
 
 const Routes = () => (
   <Router>
@@ -17,6 +18,9 @@ const Routes = () => (
         <li>
           <Link to="/scheme_validation">유저 밸리데이션 (스킴)</Link>
         </li>
+        <li>
+          <Link to="/transaction">적립</Link>
+        </li>
       </ul>
 
       <hr />
@@ -24,6 +28,7 @@ const Routes = () => (
       <Route exact path="/tid_email_phone" component={IssueTidEmailPhone} />
       <Route path="/tid_account_id" component={IssueTidAccountId} />
       <Route path="/scheme_validation" component={SchemeValidation} />
+      <Route path="/transaction" component={Transaction} />
     </div>
   </Router>
 );

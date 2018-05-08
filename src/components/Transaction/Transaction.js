@@ -1,9 +1,9 @@
 import React from 'react';
 import {Button, Form, FormGroup, Input, Label, Modal, ModalBody, ModalFooter, ModalHeader} from 'reactstrap';
 import {connect} from 'react-redux';
-import {toggleModal, validate} from "../../actions/actions";
+import {toggleModal, transaction} from "../../actions/actions";
 
-export class SchemeValidation extends React.PureComponent {
+export class Transaction extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -13,27 +13,41 @@ export class SchemeValidation extends React.PureComponent {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    this.props.validateScheme(
+    this.props.transaction(
       e.target.tid.value,
-      e.target.accountId.value
+      e.target.partnerId.value,
+      e.target.cid.value,
+      e.target.crossCheckDate.value
     )
   };
 
   render() {
     return (
       <div>
-        <h1>유저 밸리데이션 (스킴)</h1>
+        <h1>적립</h1>
         <Form onSubmit={this.handleSubmit}>
           <FormGroup>
             <Label sm={5}>
-              TID (암호화) :
+              TID :
               <Input type="text" name="tid" id="tid"/>
             </Label>
           </FormGroup>
           <FormGroup>
             <Label sm={5}>
-              어카운트 아이디 (톡유저헤더) :
-              <Input type="text" name="accountId" id="accountId"/>
+              파트너 아이디 :
+              <Input type="text" name="partnerId" id="partnerId"/>
+            </Label>
+          </FormGroup>
+          <FormGroup>
+            <Label sm={5}>
+              CID :
+              <Input type="text" name="cid" id="cid"/>
+            </Label>
+          </FormGroup>
+          <FormGroup>
+            <Label sm={5}>
+              일대사 날짜
+              <Input type="date" name="crossCheckDate" id="crossCheckDate"/>
             </Label>
           </FormGroup>
           <Button>발급</Button>
@@ -60,19 +74,20 @@ export class SchemeValidation extends React.PureComponent {
 
 function mapStateToProps(state) {
   return {
-    tid         : state.tid,
-    accountId   : state.accountId,
-    errorCode   : state.errorCode,
-    errorMsg    : state.errorMsg,
-    errorModalIsOpen : state.errorModalIsOpen
+    tid            : state.tid,
+    accountId      : state.accountId,
+    errorCode      : state.errorCode,
+    errorMsg       : state.errorMsg,
+    errorModalIsOpen    : state.errorModalIsOpen,
+    crossCheckDate : state.crossCheckDate
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    validateScheme: (tid, accountId) => dispatch(validate(tid, accountId)),
+    transaction : (tid, partnerId, cid, crossCheckDate) => dispatch(transaction(tid, partnerId, cid, crossCheckDate)),
     toggleModal : () => dispatch(toggleModal())
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SchemeValidation);
+export default connect(mapStateToProps, mapDispatchToProps)(Transaction);

@@ -1,16 +1,14 @@
-import {
-  fetchWithJson,
-  fetchWithHeader
-} from "../store/store";
+import {fetchWithJson} from "../store/store";
 
 const parseResponse = response => response.json();
 
 const initialState = {
-  tid         : "",
-  accountId   : "",
-  errorCode   : "",
-  errorMsg    : "",
-  modalIsOpen : false
+  tid              : "",
+  accountId        : "",
+  errorCode        : "",
+  errorMsg         : "",
+  errorModalIsOpen : false,
+  successModalIsOpen : false
 };
 
 export function reducer(state = initialState, action) {
@@ -21,29 +19,37 @@ export function reducer(state = initialState, action) {
         'POST',
         JSON.stringify(action.values)
       ).then(parseResponse);
-    case 'ISSUE_TID_ACCOUNT_ID':
-      return fetchWithJson(
-        'http://localhost:9000/api/v1/issue_tid_account_id',
-        'POST',
-        JSON.stringify(action.values)
-      ).then(parseResponse);
-    case 'SCHEME_VALIDATION':
-      return fetchWithHeader(
-        'http://localhost:9000/api/v1/validate?id=' + action.tid,
-        JSON.stringify(action.values)
-      ).then(parseResponse);
-    case 'SCHEME_VALIDATION_SUCCESS':
-      return state;
-    case 'SCHEME_VALIDATION_ERROR':
-      const newState = {
-        modalIsOpen : true,
+    case 'ISSUE_TID_SUCCESS':
+      return {
+        successModalIsOpen : true,
+        tid                : action.payload.data['request_id']
+      };
+    case 'ISSUE_TID_ERROR':
+      return {
+        errorModalIsOpen : true,
         errorCode   : action.payload.response.data['error_code'],
         errorMsg    : action.payload.response.data['error_message']
       };
-
-      return newState;
+    case 'SCHEME_VALIDATION_SUCCESS':
+      return state;
+    case 'SCHEME_VALIDATION_ERROR':
+      return {
+        errorModalIsOpen : true,
+        errorCode   : action.payload.response.data['error_code'],
+        errorMsg    : action.payload.response.data['error_message']
+      };
+    case 'TRANSACTION_SUCCESS':
+      return state;
+    case 'TRANSACTION_ERROR':
+      return {
+        errorModalIsOpen : true,
+        errorCode   : action.payload.response.data['error_code'],
+        errorMsg    : action.payload.response.data['error_message']
+      };
+    case 'TOGGLE_MODAL_SUCCESS' :
+      return !state.successModalIsOpen;
     case 'TOGGLE_MODAL' :
-      return !state.modalIsOpen;
+      return !state.errorModalIsOpen;
     default:
       return state;
   }
