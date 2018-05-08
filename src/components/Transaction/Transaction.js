@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button, Form, FormGroup, Input, Label, Modal, ModalBody, ModalFooter, ModalHeader} from 'reactstrap';
 import {connect} from 'react-redux';
-import {toggleModal, transaction} from "../../actions/actions";
+import {toggleModalSuccess, toggleModal, transaction} from "../../actions/actions";
 
 export class Transaction extends React.PureComponent {
   constructor(props) {
@@ -52,6 +52,21 @@ export class Transaction extends React.PureComponent {
           </FormGroup>
           <Button>발급</Button>
 
+          <Modal isOpen = {this.props.successModalIsOpen}>
+            <ModalHeader>
+              성공
+            </ModalHeader>
+            <ModalBody>
+              금액  : {this.props.amount}원
+            </ModalBody>
+            <ModalBody>
+              적립일시  : {this.props.usedAt}
+            </ModalBody>
+            <ModalFooter>
+              <Button color="primary" onClick={this.props.toggleModalSuccess}>확인</Button>
+            </ModalFooter>
+          </Modal>
+
           <Modal isOpen = {this.props.errorModalIsOpen}>
             <ModalHeader>
               서버 에러
@@ -74,19 +89,23 @@ export class Transaction extends React.PureComponent {
 
 function mapStateToProps(state) {
   return {
-    tid            : state.tid,
-    accountId      : state.accountId,
-    errorCode      : state.errorCode,
-    errorMsg       : state.errorMsg,
-    errorModalIsOpen    : state.errorModalIsOpen,
-    crossCheckDate : state.crossCheckDate
+    tid                : state.tid,
+    accountId          : state.accountId,
+    errorCode          : state.errorCode,
+    errorMsg           : state.errorMsg,
+    errorModalIsOpen   : state.errorModalIsOpen,
+    successModalIsOpen : state.successModalIsOpen,
+    crossCheckDate     : state.crossCheckDate,
+    amount             : state.amount,
+    usedAt             : state.usedAt
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     transaction : (tid, partnerId, cid, crossCheckDate) => dispatch(transaction(tid, partnerId, cid, crossCheckDate)),
-    toggleModal : () => dispatch(toggleModal())
+    toggleModal : () => dispatch(toggleModal()),
+    toggleModalSuccess : () => dispatch(toggleModalSuccess())
   }
 }
 

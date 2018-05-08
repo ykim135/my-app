@@ -97,8 +97,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    issueTid    : (accountId, partnerId, cid, amount) => dispatch(issueTid(accountId, partnerId, cid, amount)),
-    toggleModal : () => dispatch(toggleModal()),
+    issueTid           : (accountId, partnerId, cid, amount) => dispatch(issueTid(accountId, partnerId, cid, amount)),
+    toggleModal        : () => dispatch(toggleModal()),
     toggleModalSuccess : () => dispatch(toggleModalSuccess())
   }
 }

@@ -1,14 +1,18 @@
 import {fetchWithJson} from "../store/store";
+import moment from 'moment';
 
 const parseResponse = response => response.json();
 
 const initialState = {
-  tid              : "",
-  accountId        : "",
-  errorCode        : "",
-  errorMsg         : "",
-  errorModalIsOpen : false,
-  successModalIsOpen : false
+  tid                : "",
+  accountId          : "",
+  errorCode          : "",
+  errorMsg           : "",
+  errorModalIsOpen   : false,
+  successModalIsOpen : false,
+  validationResult   : "",
+  amount             : "",
+  usedAt             : ""
 };
 
 export function reducer(state = initialState, action) {
@@ -31,7 +35,12 @@ export function reducer(state = initialState, action) {
         errorMsg    : action.payload.response.data['error_message']
       };
     case 'SCHEME_VALIDATION_SUCCESS':
-      return state;
+      console.log(action.payload.data['result_type']);
+      return {
+        successModalIsOpen : true,
+        tid                : action.payload.data['request_id'],
+        validationResult   : action.payload.data['result_type']
+      };
     case 'SCHEME_VALIDATION_ERROR':
       return {
         errorModalIsOpen : true,
@@ -39,7 +48,11 @@ export function reducer(state = initialState, action) {
         errorMsg    : action.payload.response.data['error_message']
       };
     case 'TRANSACTION_SUCCESS':
-      return state;
+      return {
+        successModalIsOpen : true,
+        amount             : action.payload.data['amount'],
+        usedAt             : moment.unix(action.payload.data['used_at']).format('yyyy-mm-dd HH:mm:ss')
+      };
     case 'TRANSACTION_ERROR':
       return {
         errorModalIsOpen : true,

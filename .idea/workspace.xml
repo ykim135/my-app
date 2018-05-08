@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b8923e96-37d2-45ca-820c-a7e2403d710b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/route.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/IssueTid/IssueTidAccountId.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IssueTid/IssueTidAccountId.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SchemeValidation/SchemeValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SchemeValidation/SchemeValidation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Transaction/Transaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Transaction/Transaction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/reducers.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -40,20 +37,32 @@
           <file leaf-file-name="Transaction.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/Transaction/Transaction.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="326">
-                  <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+                <state relative-caret-position="840">
+                  <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="IssueTidAccountId.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/components/IssueTid/IssueTidAccountId.js">
+          <file leaf-file-name="SchemeValidation.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/SchemeValidation/SchemeValidation.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="745">
-                  <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+                <state relative-caret-position="803">
+                  <caret line="76" column="9" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="reducers.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/reducers/reducers.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="780">
+                  <caret line="52" column="85" selection-start-line="52" selection-start-column="85" selection-end-line="52" selection-end-column="85" />
                 </state>
               </provider>
             </entry>
@@ -62,20 +71,23 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="actions.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="actions.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/actions/actions.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1779">
-                  <caret line="135" column="12" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="12" />
+                <state relative-caret-position="923">
+                  <caret line="154" column="46" selection-start-line="154" selection-start-column="46" selection-end-line="154" selection-end-column="46" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="reducers.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/reducers/reducers.js">
+          <file leaf-file-name="IssueTidAccountId.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/IssueTid/IssueTidAccountId.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+                <state relative-caret-position="908">
+                  <caret line="93" column="47" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -121,11 +133,11 @@
         <option value="$PROJECT_DIR$/src/components/IssueTid/IssueTidEmailPhone.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/store/store.js" />
-        <option value="$PROJECT_DIR$/src/components/SchemeValidation/SchemeValidation.js" />
         <option value="$PROJECT_DIR$/src/components/App/route.js" />
-        <option value="$PROJECT_DIR$/src/components/Transaction/Transaction.js" />
         <option value="$PROJECT_DIR$/src/actions/actions.js" />
         <option value="$PROJECT_DIR$/src/components/IssueTid/IssueTidAccountId.js" />
+        <option value="$PROJECT_DIR$/src/components/SchemeValidation/SchemeValidation.js" />
+        <option value="$PROJECT_DIR$/src/components/Transaction/Transaction.js" />
         <option value="$PROJECT_DIR$/src/reducers/reducers.js" />
       </list>
     </option>
@@ -147,7 +159,7 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2667" />
+    <option name="x" value="2699" />
     <option name="y" value="62" />
     <option name="width" value="1991" />
     <option name="height" value="1337" />
@@ -234,7 +246,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="reducer&#9;FILE&#9;file:///Users/kakaopay/workspace/kakaopay/my-app/src/reducers/reducers.js&#10;index.&#9;FILE&#9;file:///Users/kakaopay/workspace/kakaopay/my-app/src/index.js&#10;action&#9;FILE&#9;file:///Users/kakaopay/workspace/kakaopay/my-app/src/actions/actions.js&#10;red&#9;FILE&#9;file:///Users/kakaopay/workspace/kakaopay/my-app/src/reducers/reducers.js&#10;store&#9;FILE&#9;file:///Users/kakaopay/workspace/kakaopay/my-app/src/store/store.js&#10;route&#9;FILE&#9;file:///Users/kakaopay/workspace/kakaopay/my-app/src/components/App/route.js&#10;ind&#9;FILE&#9;file:///Users/kakaopay/workspace/kakaopay/my-app/src/index.js" />
+    <property name="SearchEverywhereHistoryKey" value="redu&#9;FILE&#9;file:///Users/kakaopay/workspace/kakaopay/my-app/src/reducers/reducers.js&#10;Scheme&#9;FILE&#9;file:///Users/kakaopay/workspace/kakaopay/my-app/src/components/SchemeValidation/SchemeValidation.js&#10;reducer&#9;FILE&#9;file:///Users/kakaopay/workspace/kakaopay/my-app/src/reducers/reducers.js&#10;index.&#9;FILE&#9;file:///Users/kakaopay/workspace/kakaopay/my-app/src/index.js&#10;action&#9;FILE&#9;file:///Users/kakaopay/workspace/kakaopay/my-app/src/actions/actions.js&#10;red&#9;FILE&#9;file:///Users/kakaopay/workspace/kakaopay/my-app/src/reducers/reducers.js&#10;store&#9;FILE&#9;file:///Users/kakaopay/workspace/kakaopay/my-app/src/store/store.js&#10;route&#9;FILE&#9;file:///Users/kakaopay/workspace/kakaopay/my-app/src/components/App/route.js&#10;ind&#9;FILE&#9;file:///Users/kakaopay/workspace/kakaopay/my-app/src/index.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -318,15 +330,15 @@
       <workItem from="1525082052821" duration="9141000" />
       <workItem from="1525309905487" duration="19465000" />
       <workItem from="1525394180523" duration="12377000" />
-      <workItem from="1525742472715" duration="22877000" />
+      <workItem from="1525742472715" duration="24803000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63860000" />
+    <option name="totallyTimeSpent" value="65786000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2667" y="62" width="1991" height="1337" extended-state="0" />
+    <frame x="2699" y="62" width="1991" height="1337" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -368,7 +380,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -573,16 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SchemeValidation/SchemeValidation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -593,24 +595,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/IssueTid/IssueTidAccountId.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="908">
+          <caret line="93" column="47" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/actions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1779">
-          <caret line="135" column="12" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="12" />
+        <state relative-caret-position="923">
+          <caret line="154" column="46" selection-start-line="154" selection-start-column="46" selection-end-line="154" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Transaction/Transaction.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+        <state relative-caret-position="840">
+          <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/IssueTid/IssueTidAccountId.js">
+    <entry file="file://$PROJECT_DIR$/src/components/SchemeValidation/SchemeValidation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="745">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="803">
+          <caret line="76" column="9" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -619,8 +634,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/reducers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        <state relative-caret-position="780">
+          <caret line="52" column="85" selection-start-line="52" selection-start-column="85" selection-end-line="52" selection-end-column="85" />
         </state>
       </provider>
     </entry>
