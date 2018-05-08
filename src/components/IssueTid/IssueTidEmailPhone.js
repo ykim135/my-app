@@ -7,13 +7,13 @@ import {
   Input
 } from 'reactstrap';
 import { connect } from 'react-redux';
-import { issueTidAction } from '../../actions/actions';
+import { issueTidEmailPhoneAction } from '../../actions/actions';
 
-export class IssueTid extends React.PureComponent {
+export class IssueTidEmailPhone extends React.PureComponent {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    this.props.dispatch(issueTidAction(
+    this.props.dispatch(issueTidEmailPhoneAction(
       e.target.name.value,
       e.target.partnerId.value,
       e.target.cid.value,
@@ -23,14 +23,6 @@ export class IssueTid extends React.PureComponent {
       e.target.birth.value
     ))
   };
-
-  increment = () => {
-    this.props.dispatch({ type: 'INCREMENT' });
-  }
-
-  decrement = () => {
-    this.props.dispatch({ type: 'DECREMENT' });
-  }
 
   render() {
     return (
@@ -81,28 +73,10 @@ export class IssueTid extends React.PureComponent {
           </FormGroup>
           <Button>발급</Button>
         </Form>
-
-        <button onClick={this.decrement}>-</button>
-        <span>{this.props.count}</span>
-        <button onClick={this.increment}>+</button>
       </div>
     )
   }
 }
-
-// function mapStateToProps(state) {
-//   return {
-//     name      : state.name,
-//     partnerId : state.partnerId,
-//     cid       : state.cid,
-//     amount    : state.amount,
-//     email     : state.email,
-//     phone     : state.phone,
-//     birth     : state.birth
-//   };
-// }
-//
-// export default connect(mapStateToProps)(IssueTid);
 
 function mapStateToProps(state) {
   return {
@@ -112,9 +86,8 @@ function mapStateToProps(state) {
     amount    : state.amount,
     email     : state.email,
     phone     : state.phone,
-    birth     : state.birth,
-    count     : state.count
+    birth     : state.birth
   };
 }
 
-export default connect(mapStateToProps)(IssueTid);
+export default connect(mapStateToProps)(IssueTidEmailPhone);

@@ -1,71 +1,31 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import IssueTid from '../IssueTid/IssueTid'
+import IssueTidEmailPhone from '../IssueTid/IssueTidEmailPhone'
+import IssueTidAccountId from '../IssueTid/IssueTidAccountId'
+import SchemeValidation from '../SchemeValidation/SchemeValidation'
 
 const Routes = () => (
   <Router>
     <div>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/tid_email_phone">TID 발급 (이메일과 전화번호)</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/tid_account_id">TID 발급 (어카운트 아이디)</Link>
         </li>
         <li>
-          <Link to="/topics">Topics</Link>
+          <Link to="/scheme_validation">유저 밸리데이션 (스킴)</Link>
         </li>
       </ul>
 
       <hr />
 
-      <Route exact path="/" component={IssueTid} />
-      <Route path="/about" component={About} />
-      <Route path="/topics" component={Topics} />
+      <Route exact path="/tid_email_phone" component={IssueTidEmailPhone} />
+      <Route path="/tid_account_id" component={IssueTidAccountId} />
+      <Route path="/scheme_validation" component={SchemeValidation} />
     </div>
   </Router>
-);
-
-const Home = () => (
-  <div>
-    <h2>Home</h2>
-  </div>
-);
-
-const About = () => (
-  <div>
-    <h2>About</h2>
-  </div>
-);
-
-const Topics = ({ match }) => (
-  <div>
-    <h2>Topics</h2>
-    <ul>
-      <li>
-        <Link to={`${match.url}/rendering`}>Rendering with React</Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/components`}>Components</Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
-      </li>
-    </ul>
-
-    <Route path={`${match.url}/:topicId`} component={Topic} />
-    <Route
-      exact
-      path={match.url}
-      render={() => <h3>Please select a topic.</h3>}
-    />
-  </div>
-);
-
-const Topic = ({ match }) => (
-  <div>
-    <h3>{match.params.topicId}</h3>
-  </div>
 );
 
 export default Routes;

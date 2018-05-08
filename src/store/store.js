@@ -1,14 +1,6 @@
 import fetch from 'isomorphic-fetch';
 
-export const fetchThenDispatch = (dispatch, url, method, body) =>
-  fetch(
-    url,
-    {
-      method,
-      body,
-      headers: { 'Content-Type' : 'application/json' }
-    }
-  );
+import axios from 'axios';
 
 export const fetchWithJson = (url, method, body) =>
   fetch(
@@ -20,4 +12,10 @@ export const fetchWithJson = (url, method, body) =>
     }
   );
 
-
+export const fetchWithHeader = (url, talkUserHeader) => {
+  axios
+    .get(
+      url,
+      { headers : { 'talk_user' : talkUserHeader } }
+    )
+};
