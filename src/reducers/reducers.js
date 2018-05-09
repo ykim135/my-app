@@ -51,7 +51,7 @@ export function reducer(state = initialState, action) {
       return {
         successModalIsOpen : true,
         amount             : action.payload.data['amount'],
-        usedAt             : moment.unix(action.payload.data['used_at']).format('yyyy-mm-dd HH:mm:ss')
+        usedAt             : moment(action.payload.data['used_at']).format('YYYY-MM-DD HH:mm:ss')
       };
     case 'TRANSACTION_ERROR':
       return {
